@@ -1,0 +1,35 @@
+<!-- layout.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="20;url=http://127.0.0.1:5000/"/>
+    <title>{% block title %}RandoMemes.Com{% endblock %}</title>
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        Please note, these memes might not be suitable to everyone and we cant be held responsible for any consequences that might occur !
+        <h2>Logo</h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archives">Archives</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Add common footer content here -->
+        <p>&copy; 2023 RandoMemes.Com</p>
+    </footer>
+</body>
+</html>

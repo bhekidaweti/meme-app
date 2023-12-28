@@ -1,0 +1,11 @@
+<!-- index.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+<div id="memes">
+    <h2>Latest Meme</h2>
+    <img src="{{ meme_pic }}" alt="Latest Meme">
+    <p>Sub-reddit credit: {{ subreddit }}</p>
+</div>
+{% endblock %}

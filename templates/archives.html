@@ -1,0 +1,15 @@
+<!-- archives.html -->
+
+{% extends "layout.html" %}
+
+{% block title %}Meme Archives{% endblock %}
+
+{% block content %}
+    <h2>Meme Archives</h2>
+    {% for meme in memes %}
+        <div>
+            <img src="{{ meme.meme_url }}" alt="Meme">
+            <p>Sub-reddit credit: {{ meme.subreddit }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
